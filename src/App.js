@@ -58,7 +58,7 @@ class App extends Component {
   handleChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
-    let formErrors = this.state.formErrors;
+    let formErrors = { ...this.state.formErrors };
 
     switch (name) {
       case "firstName":
